@@ -7,7 +7,8 @@
 
 ## Introduction:
   First Tap game in inspired by famous indian family & friend game "Chidya udd",First Tap game can be played by 2-4 players, the one who taps first and fast will not always be winner because if the sentance said by speaker is wrong then the player who tapped on the button will be in penalty.
-  
+## Download Link:
+  Android: <a href="https://drive.google.com/file/d/1n3WrQCi8ydwjOXbUghkBcSahMhaUuIZl/view?usp=drivesdk ">Download</a>
 ## Demo Video Link:
   <a href="#">Soon</a>
   
@@ -17,7 +18,7 @@
 ## Technology Stack:
   1) Unity Engine
   2) C#
-  3) Photon Networking
+  3) Visual Studio Code
   4) Adobe Xd(For designing)
   
 
