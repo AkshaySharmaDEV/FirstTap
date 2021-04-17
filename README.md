@@ -6,7 +6,7 @@
 
 
 ## Introduction:
-  First Tap game in inspired by famous indian family & friend game "Chidya udd",First Tap game can be played by 2-4 players, the one who taps first and fast will not always be winner because if the sentance said by speaker in wrong then the player who tapped on the button will be in penalty.
+  First Tap game in inspired by famous indian family & friend game "Chidya udd",First Tap game can be played by 2-4 players, the one who taps first and fast will not always be winner because if the sentance said by speaker is wrong then the player who tapped on the button will be in penalty.
   
 ## Demo Video Link:
   <a href="#">Soon</a>
