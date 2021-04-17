@@ -2,7 +2,7 @@
 <p align="center">
 </p>
 
-<a href="https://hackofiesta-iiitl.tech/"> Hack-o-Fiesta is an event organized by IIIT Lucknow. <img src="https://hackofiesta-iiitl.tech/img/logo.png" height=20px> </a>
+<a href="https://hackofiesta-iiitl.tech/"> <img src="https://hackofiesta-iiitl.tech/img/logo.png" height=20px></a> <h5>Hack-o-Fiesta is an event organized by IIIT Lucknow.</h>
 
 
 ## Introduction:
