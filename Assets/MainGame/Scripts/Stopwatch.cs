@@ -254,7 +254,7 @@ public class Stopwatch : MonoBehaviour
         {
 
             P1no1.SetActive(true);
-            string wrg = "-1";
+            string wrg = "1";
             PlayerPrefs.SetString("wrong",wrg);
             Wrong.text = PlayerPrefs.GetString("wrong");
             
@@ -272,7 +272,7 @@ public class Stopwatch : MonoBehaviour
         {
 
             P2no1.SetActive(true);
-            string wrg1 = "-1";
+            string wrg1 = "1";
             PlayerPrefs.SetString("wrong1",wrg1);
             Wrong1.text = PlayerPrefs.GetString("wrong1");
             
@@ -290,7 +290,7 @@ public class Stopwatch : MonoBehaviour
         {
 
             P3no1.SetActive(true);
-            string wrg2 = "-1";
+            string wrg2 = "1";
             PlayerPrefs.SetString("wrong2",wrg2);
             Wrong2.text = PlayerPrefs.GetString("wrong2");
             
@@ -305,7 +305,7 @@ public class Stopwatch : MonoBehaviour
             // Pyes1.SetActive(true);
             P1no1.SetActive(true);
             print("Working1");
-            string wrg4 = "-1";
+            string wrg4 = "1";
             PlayerPrefs.SetString("wrong4",wrg4);
             Wrong.text = PlayerPrefs.GetString("wrong4");
 
@@ -324,7 +324,7 @@ public class Stopwatch : MonoBehaviour
             // Pyes1.SetActive(true);
             P2no1.SetActive(true);
             print("Working2");
-            string wrg5 = "-1";
+            string wrg5 = "1";
             PlayerPrefs.SetString("wrong5",wrg5);
             Wrong1.text = PlayerPrefs.GetString("wrong5");
 
@@ -342,7 +342,7 @@ public class Stopwatch : MonoBehaviour
             // Pyes1.SetActive(true);
             P3no1.SetActive(true);
             print("Working3");
-            string wrg6 = "-1";
+            string wrg6 = "1";
             PlayerPrefs.SetString("wrong6",wrg6);
             Wrong2.text = PlayerPrefs.GetString("wrong6");
 

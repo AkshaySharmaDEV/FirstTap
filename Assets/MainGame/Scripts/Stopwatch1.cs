@@ -7,6 +7,10 @@ using System;
 
 public class Stopwatch1 : MonoBehaviour
 {
+
+    float timer = 15f;
+    bool timerReached = false;
+
     public TMP_Text round1time;
     public TMP_Text round1time1;
     public TMP_Text round1time2;
@@ -135,10 +139,10 @@ public class Stopwatch1 : MonoBehaviour
         if(currentTime1 < currentTime2 && currentTime1 < currentTime3)
         {
             print("player2");
-            playerlabel.text = string.Format("{0} is first to tap!", playername1.text);
-            playerlabel1.text = string.Format("{0} is first to tap!", playername1.text);
-            playerlabel2.text = string.Format("{0} is first to tap!", playername1.text);
-            playerlabel3.text = string.Format("{0} is first to tap!", playername1.text);
+            playerlabel.text = string.Format("{0} is first to tap!", playername.text);
+            playerlabel1.text = string.Format("{0} is first to tap!", playername.text);
+            playerlabel2.text = string.Format("{0} is first to tap!", playername.text);
+            playerlabel3.text = string.Format("{0} is first to tap!", playername.text);
             
 
         }
@@ -179,12 +183,14 @@ public class Stopwatch1 : MonoBehaviour
     public void GetName()
     {
 
-        playerlabel.text = string.Format("{0} turns to speak!", playername.text);
-        playerlabel1.text = string.Format("{0} turns to speak!", playername.text);
-        playerlabel2.text = string.Format("{0} turns to speak!", playername.text);
-        playerlabel3.text = string.Format("{0} turns to speak!", playername.text);
+        playerlabel.text = string.Format("{0} turns to speak!", playername1.text);
+        playerlabel1.text = string.Format("{0} turns to speak!", playername1.text);
+        playerlabel2.text = string.Format("{0} turns to speak!", playername1.text);
+        playerlabel3.text = string.Format("{0} turns to speak!", playername1.text);
 
     }
+
+    
 
 
 
@@ -199,10 +205,10 @@ public class Stopwatch1 : MonoBehaviour
         tap2.interactable = true;
         tap3.interactable = true;
 
-        playerlabel.text = string.Format("{0} Get ready for Round1!", playername.text);
-        playerlabel1.text = string.Format("{0} Get ready for Round1!", playername1.text);
-        playerlabel2.text = string.Format("{0} Get ready for Round1!", playername2.text);
-        playerlabel3.text = string.Format("{0} Get ready for Round1!", playername3.text);
+        playerlabel.text = string.Format("{0} Get ready for Round2!", playername.text);
+        playerlabel1.text = string.Format("{0} Get ready for Round2!", playername1.text);
+        playerlabel2.text = string.Format("{0} Get ready for Round2!", playername2.text);
+        playerlabel3.text = string.Format("{0} Get ready for Round2!", playername3.text);
 
         StartCoroutine(LateCall());
 
@@ -214,15 +220,37 @@ public class Stopwatch1 : MonoBehaviour
         
     }
 
+    public void CheckVisible()
+    {
+        if (!timerReached)
+            timer += Time.deltaTime;
+
+        if (!timerReached && timer > 5)
+        {
+            
+            tick();
+
+            //Set to false so that We don't run this again
+            timerReached = true;
+        }
+    }
+
+    public void tick()
+    {
+        // Yes.SetActive(true);
+        // No.SetActive(true);
+        // playerlabel.text = string.Format("{0} is that sentance is correct?", playername1.text);
+    }
+
+
 
     IEnumerator LateCall()
     {
 
         yield return new WaitForSeconds(sec);
-
         Yes.SetActive(true);
         No.SetActive(true);
-        playerlabel.text = string.Format("{0} is that sentance is correct?", playername.text);
+        playerlabel.text = string.Format("{0} is that sentance is correct?", playername1.text);
         
         //Do Function here...
     }
@@ -241,7 +269,7 @@ public class Stopwatch1 : MonoBehaviour
         {
 
             P1no1.SetActive(true);
-            string wrg = "-1";
+            string wrg = "1";
             PlayerPrefs.SetString("wrong",wrg);
             Wrong.text = PlayerPrefs.GetString("wrong");
             
@@ -259,7 +287,7 @@ public class Stopwatch1 : MonoBehaviour
         {
 
             P2no1.SetActive(true);
-            string wrg1 = "-1";
+            string wrg1 = "1";
             PlayerPrefs.SetString("wrong1",wrg1);
             Wrong1.text = PlayerPrefs.GetString("wrong1");
             
@@ -277,7 +305,7 @@ public class Stopwatch1 : MonoBehaviour
         {
 
             P3no1.SetActive(true);
-            string wrg2 = "-1";
+            string wrg2 = "1";
             PlayerPrefs.SetString("wrong2",wrg2);
             Wrong2.text = PlayerPrefs.GetString("wrong2");
             
@@ -292,7 +320,7 @@ public class Stopwatch1 : MonoBehaviour
             // Pyes1.SetActive(true);
             P1no1.SetActive(true);
             print("Working1");
-            string wrg4 = "-1";
+            string wrg4 = "1";
             PlayerPrefs.SetString("wrong4",wrg4);
             Wrong.text = PlayerPrefs.GetString("wrong4");
 
@@ -311,7 +339,7 @@ public class Stopwatch1 : MonoBehaviour
             // Pyes1.SetActive(true);
             P2no1.SetActive(true);
             print("Working2");
-            string wrg5 = "-1";
+            string wrg5 = "1";
             PlayerPrefs.SetString("wrong5",wrg5);
             Wrong1.text = PlayerPrefs.GetString("wrong5");
 
@@ -329,7 +357,7 @@ public class Stopwatch1 : MonoBehaviour
             // Pyes1.SetActive(true);
             P3no1.SetActive(true);
             print("Working3");
-            string wrg6 = "-1";
+            string wrg6 = "1";
             PlayerPrefs.SetString("wrong6",wrg6);
             Wrong2.text = PlayerPrefs.GetString("wrong6");
 
@@ -367,8 +395,8 @@ public class Stopwatch1 : MonoBehaviour
 
     public void StopStopwatch1()
     {
-        stopwatchActive1 = false;   
-        PlayerPrefs.SetFloat("time",currentTime1);
+        stopwatchActive = false;   
+        PlayerPrefs.SetFloat("time",currentTime);
         round1time.text = PlayerPrefs.GetFloat("time").ToString();
 
     }
